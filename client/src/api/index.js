@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({baseURL:"http://localhost:5000"})
+const API = axios.create({baseURL:"http://13.235.94.164:5000"})
 API.interceptors.request.use((req)=>{
     if(localStorage.getItem('profile')){
         req.headers.autherization= `loveyou ${JSON.parse(localStorage.getItem('profile')).token}`
