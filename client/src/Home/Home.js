@@ -21,11 +21,14 @@ const Home = () => {
 
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
-  //const location = useLocation()
+  const location = useLocation()
 
   const [search, setSearch] = useState('');
   const [tags, setTags] = useState([]);
   const navigate = useNavigate();
+  useEffect(()=>{
+    setTags([])
+  },[location])
 
   const searchPost = () => {
     if (search.trim() || tags) {
@@ -50,10 +53,10 @@ const Home = () => {
     <Grow in>
       <Container maxWidth="xl">
         <Grid container justifyContent="space-between" alignItems="stretch" spacing={3} className={classes.gridContainer}>
-          <Grid item xs={12} sm={6} md={9}>
+          <Grid item xs={12} sm={9} md={9}>
             <Posts setCurrentId={setCurrentId} />
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={3} md={3}>
             <AppBar className={classes.appBarSearch} position="static" color="inherit">
               <TextField onKeyDown={handleKeyPress} name="search" variant="outlined" label="Search Memories" fullWidth value={search} onChange={(e) => setSearch(e.target.value)} />
               <ChipInput

@@ -2,6 +2,7 @@ import { AppBar, Avatar, Button, Toolbar, Typography } from '@material-ui/core';
 import {Link, useLocation, useNavigate} from 'react-router-dom'
 import React, { useEffect, useState } from 'react';
 import Styles from './Styles';
+import HomeIcon from '@material-ui/icons/Home';
 import { useDispatch } from 'react-redux';
 
 const Navbar = () => {
@@ -20,9 +21,14 @@ const Navbar = () => {
     },[location])
     //console.log(user)
   return (
-    <AppBar position='static' align="center" className={classes.appBar}>
+    <AppBar position='static' align="center" className={classes.appBar} xs={12} >
         <div className={classes.brandContainer}>
             <Typography component={Link} to="/posts" className={classes.heading} variant='h4' color='inherit' underline="none">Stories</Typography>
+        </div>
+        <div className={classes.home}>
+            <Link to="/" style={{color:"white",}} >
+                 <HomeIcon fontSize='large'  />
+            </Link>
         </div>
         <Toolbar className={classes.toolbar}>
             {user?(

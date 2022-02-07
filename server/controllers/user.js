@@ -12,7 +12,7 @@ export const signin = async(req,res)=>{
 
         const isPwdCrt = await bcrypt.compare(password,existingUser.password)
 
-        if(!isPwdCrt) return res.status(404).json({message:"Invalid password"})
+        if(!isPwdCrt) return res.status(409).json({message:"Invalid password"})
 
         const token = jwt.sign({email:existingUser.email,id:existingUser._id},'test',{expiresIn:"1h"})
 
