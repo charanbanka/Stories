@@ -31,7 +31,6 @@ export const getPostsBySearch = (searchQuery)=> async(dispatch)=>{
 
         dispatch({type:'SEARCH',payload:data})
         dispatch({type:"NOTLOADING"})
-        console.log(data)
     } catch (error) {
         console.log(error.message)   
     }

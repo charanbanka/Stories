@@ -19,6 +19,15 @@ export default makeStyles ((theme)=>({
     avatar:{
         backgroundColor:"red",
         margin:theme.spacing(1),
+    },
+    signinsignup:{
+        display: "flex",
+        marginTop:theme.spacing(0.5),
+        alignItems:"center",
+    },
+    forgot:{
+     display   : "flex",
+     justifyContent:"flex-end",
     }
 
 }))

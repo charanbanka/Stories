@@ -8,7 +8,7 @@ const Posts = ({setCurrentId}) => {
     const classes = Styles()
     const {posts,isLoading} = useSelector((state)=>state.posts)
   return (
-      isLoading ? <CircularProgress/> :(
+      isLoading ? <CircularProgress sixe="7em" /> :(
           <Grid container spacing={2}>
               {posts.map((post)=>(
                   <Grid key={post._id} item xs={12} sm={6} md={4} lg={4}>
