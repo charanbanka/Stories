@@ -32,7 +32,7 @@ const PostDetails = () => {
     );
   }
   if(!post) return <CircularProgress size="7em" />
-  const recommendPosts = posts.filter((_id)=>_id!==post._id)
+  const recommendPosts = posts.filter((postone)=>postone._id!==post._id)
   return (
          <Paper elevation={6} style={{ padding: '20px', borderRadius: '15px' }}>
             <div className={classes.card}>
