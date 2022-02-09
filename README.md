@@ -24,3 +24,5 @@ Search by tags
 
 once we click content on posts, it will render new page and shows perticular post and some recomanded posts also shows below the post
 ![Screenshot (62)](https://user-images.githubusercontent.com/79981696/153139476-83578414-5b90-4344-ba1a-f3f02b3b1097.png)
+
+![Screenshot (63)](https://user-images.githubusercontent.com/79981696/153139698-34fe9c78-fe90-4873-9f19-a2014c4fdbc7.png)
